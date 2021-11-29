@@ -318,7 +318,7 @@ class Underground implements Feature {
         let success = true;
         switch (item.valueType) {
             case 'Diamond':
-                App.game.wallet.gainDiamonds(item.value * amount);
+                App.game.wallet.gainDiamonds(item.value * amount * 100);
                 break;
             case 'Mine Egg':
                 if (!App.game.breeding.hasFreeEggSlot()) {
@@ -408,13 +408,13 @@ $(document).ready(() => {
 });
 
 namespace Underground {
-    export const BASE_ENERGY_MAX = 50;
+    export const BASE_ENERGY_MAX = 5000;
     export const BASE_ITEMS_MAX = 3;
     export const BASE_ITEMS_MIN = 1;
-    export const BASE_ENERGY_GAIN = 3;
-    export const BASE_ENERGY_REGEN_TIME = 60;
+    export const BASE_ENERGY_GAIN = 300;
+    export const BASE_ENERGY_REGEN_TIME = 5;
     export const BASE_DAILY_DEALS_MAX = 3;
-    export const BASE_BOMB_EFFICIENCY = 10;
+    export const BASE_BOMB_EFFICIENCY = 50;
     export const BASE_SURVEY_CHARGE_EFFICIENCY = 1;
 
     export const sizeX = 25;
@@ -422,6 +422,6 @@ namespace Underground {
 
     export const CHISEL_ENERGY = 1;
     export const HAMMER_ENERGY = 3;
-    export const BOMB_ENERGY = 10;
+    export const BOMB_ENERGY = 1;
     export const SURVEY_ENERGY = 15;
 }

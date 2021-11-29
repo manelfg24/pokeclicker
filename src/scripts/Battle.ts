@@ -29,7 +29,7 @@ class Battle {
         // TODO: figure out a better way of handling this
         // Limit pokemon attack speed, Only allow 1 attack per 900ms
         const now = Date.now();
-        if (this.lastPokemonAttack > now - 900) {
+        if (this.lastPokemonAttack > now - 90) {
             return;
         }
         this.lastPokemonAttack = now;
